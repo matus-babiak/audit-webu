@@ -60,6 +60,28 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Prepojenie s Ecomail (formulár CTA)
+
+Formulár „Získať audit checklist“ odosiela kontakty do **Ecomail** (e-mailový zoznam).
+
+### Čo treba urobiť
+
+1. **Ecomail účet**  
+   V [Ecomail](https://ecomail.cz) si vytvorte zoznam kontaktov (napr. „Lead magnet – audit“) a zapíšte si jeho **ID** (v nastavení zoznamu alebo v URL).
+
+2. **API kľúč**  
+   V Ecomail: **Nastavenia → Integrácie → API** – skopírujte API kľúč (iba pre administrátorov).
+
+3. **Nasadenie na Netlify**  
+   - Deployujte projekt na [Netlify](https://netlify.com) (napr. cez Git).  
+   - V **Site settings → Environment variables** pridajte:
+     - `ECOMAIL_API_KEY` = váš Ecomail API kľúč  
+     - `ECOMAIL_LIST_ID` = ID zoznamu kontaktov  
+   - Spustite nový deploy.
+
+4. **Lokálne testovanie**  
+   Ak chcete formulár vyskúšať lokálne, vytvorte súbor `.env` (podľa `.env.example`) s `ECOMAIL_API_KEY` a `ECOMAIL_LIST_ID` a spustite `netlify dev` namiesto `npm run dev` – tak sa spustia aj serverless funkcie.
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.

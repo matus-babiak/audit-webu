@@ -25,13 +25,11 @@ const PillarSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {pillars.map((pillar, i) => (
             <div
               key={i}
-              className={`glass-card p-8 flex flex-col gap-4 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 ${
-                i === 4 ? "sm:col-span-2 lg:col-span-1" : ""
-              }`}
+              className="glass-card p-8 flex flex-col gap-4 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 w-72 min-w-72 flex-shrink-0 min-h-52"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                 <pillar.icon className="w-6 h-6 text-primary" />

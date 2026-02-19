@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Env (API kľúče – nikdy necommitujte)
+.env
+.env.local
