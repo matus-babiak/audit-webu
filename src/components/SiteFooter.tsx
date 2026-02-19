@@ -72,7 +72,9 @@ const SiteFooter = () => {
             </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <span className="cursor-default">Ochrana osobných údajov</span>
+                <a href="https://docs.google.com/document/d/1A_OzJNeGj_VSsucVBozlQ1w7sgLCUvuMfC7Qp2DdzEc/edit?tab=t.0#heading=h.u9d2qaeo8y4f" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  Ochrana osobných údajov
+                </a>
               </li>
             </ul>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
