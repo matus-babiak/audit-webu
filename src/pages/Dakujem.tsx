@@ -1,32 +1,13 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-
-declare global {
-  interface Window {
-    Cal?: ((a: string, b: string, c?: object) => void) & { ns?: { meeting?: (action: string, opts: object) => void } };
-  }
-}
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 const Dakujem = () => {
   useEffect(() => {
-    if (typeof window === "undefined" || window.Cal?.ns?.meeting) return;
-
-    const script = document.createElement("script");
-    script.src = "https://app.cal.com/embed/embed.js";
-    script.async = true;
-    script.onload = () => {
-      window.Cal?.("init", "meeting", { origin: "https://app.cal.com" });
-      window.Cal?.ns?.meeting?.("inline", {
-        elementOrSelector: "#my-cal-inline-meeting",
-        config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" },
-        calLink: "babiak/meeting",
-      });
-      window.Cal?.ns?.meeting?.("ui", { hideEventTypeDetails: false, layout: "month_view" });
-    };
-    document.head.appendChild(script);
-    return () => {
-      script.remove();
-    };
+    (async function () {
+      const cal = await getCalApi({ namespace: "meeting" });
+      cal?.("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
   }, []);
 
   return (
@@ -54,11 +35,14 @@ const Dakujem = () => {
               Vyberieme sa spoločne cez zistenia z auditu, určíme prioritu a poviem vám,
               čo zmeniť ako prvé. Konzultácia trvá 20 minút a je bez záväzkov.
             </p>
-            <div
-              id="my-cal-inline-meeting"
-              className="w-full min-h-[630px] overflow-auto rounded-xl border border-border/50"
-              style={{ minHeight: "630px" }}
-            />
+            <div className="w-full min-h-[630px] rounded-xl border border-border/50 overflow-hidden">
+              <Cal
+                namespace="meeting"
+                calLink="babiak/meeting"
+                style={{ width: "100%", height: "100%", overflow: "scroll" }}
+                config={{ layout: "month_view", useSlotsViewOnSmallScreen: "true" }}
+              />
+            </div>
           </div>
 
           <Link
