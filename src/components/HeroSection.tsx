@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center gap-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-secondary/50 text-sm text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            Bezplatný audit v Google Sheets
+            Bezplatný audit webu
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tight max-w-5xl">
