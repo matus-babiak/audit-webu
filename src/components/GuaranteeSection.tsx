@@ -3,23 +3,23 @@ import { Shield, MessageCircle, Laptop, Heart } from "lucide-react";
 const guarantees = [
   {
     icon: Shield,
-    title: "Garancia hodnoty",
-    desc: "Ak prejdete celým checklistom a nenájdete ani jednu chybu, napíšte mi. Osobne a bezplatne sa pozriem na váš web a pošlem vám tip na mieru.",
+    title: "Garancia nájdeného potenciálu",
+    desc: "Som si taký istý kvalitou tohto auditu, že vám garantujem výsledok. Ak prejdete celým checklistom a nenájdete ani jedno miesto na zlepšenie vášho webu, napíšte mi. Osobne a bezplatne sa pozriem na vašu stránku a pošlem vám jedno strategické odporúčanie, ktoré vám môže priniesť nového klienta.",
   },
   {
     icon: MessageCircle,
-    title: "Garancia zrozumiteľnosti",
-    desc: "Audit je napísaný tak, aby ste sa vedeli jednoducho rozhodnúť. Ak narazíte na bod, ktorému nebudete rozumieť, stačí odpovedať na e-mail.",
+    title: "Garancia biznisovej zrozumiteľnosti",
+    desc: 'Žiadny zbytočný IT slang. Celý audit je písaný jazykom, ktorému rozumie majiteľ firmy, marketér aj obchodník. Garantujem vám, že každému bodu okamžite porozumiete a budete vedieť, prečo je pre váš biznis dôležitý, bez toho, aby ste museli „googliť" technické pojmy.',
   },
   {
     icon: Laptop,
-    title: "Garancia technickej nezávislosti",
-    desc: "Nepotrebujete inštalovať žiadny softvér ani platiť za nástroje. Audit funguje v Google Sheets/Excel a je okamžite pripravený na použitie.",
+    title: "Garancia okamžitej použiteľnosti",
+    desc: "Nezáleží na tom, či váš web beží na WordPresse, Webflowe alebo riešení na mieru. Princípy v tomto checkliste sú univerzálne a zamerané na psychológiu klienta. Nemusíte nič inštalovať – audit funguje v prostredí Google Sheets a je pripravený na prácu do 3 sekúnd od stiahnutia.",
   },
   {
     icon: Heart,
-    title: "Garancia nulového rizika",
-    desc: "Stiahnutie je nezáväzné. Ak kedykoľvek usúdite, že tieto informácie nemajú hodnotu, môžete sa odhlásiť jedným kliknutím. Nič neriskujete.",
+    title: "Garancia súkromia a slobody",
+    desc: "Vaša e-mailová adresa je u mňa v bezpečí. Žiadny spam, len hodnotné tipy pre váš biznis. Ak kedykoľvek usúdite, že vám moje e-maily neprinášajú hodnotu, môžete sa odhlásiť jedným kliknutím. Rešpektujem váš čas aj vašu schránku.",
   },
 ];
 

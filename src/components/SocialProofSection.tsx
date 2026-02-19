@@ -1,21 +1,21 @@
-import { TrendingUp, Search, PiggyBank, Quote } from "lucide-react";
+import { TrendingUp, Search, Clock, Quote } from "lucide-react";
 
 const stats = [
-  { icon: TrendingUp, value: "+20%", label: "Nárast vyplnených formulárov u klienta v prvom mesiaci" },
-  { icon: Search, value: "8 z 10", label: "Webov nemalo správne nastavené H1 nadpisy" },
-  { icon: PiggyBank, value: "Stovky €", label: "Ušetrených za drahé auditné agentúry" },
+  { icon: TrendingUp, value: "+20 %", label: "Nárast odoslaných formulárov po úprave UX." },
+  { icon: Search, value: "8 z 10", label: "Webov konzultantov nemalo správne nastavené H1 nadpisy (prichádzali o Google traffic)." },
+  { icon: Clock, value: "30 minút", label: "Čas potrebný na kompletnú diagnostiku." },
 ];
 
 const testimonials = [
   {
-    text: "Myslel som si, že môj e-shop je v poriadku. Tento zoznam mi však ukázal, že moje tlačidlá na mobile boli príliš malé a texty nečitateľné. Opravil som to za hodinu a zákazníci sa prestali sťažovať.",
+    text: "Myslel som si, že môj web architekta stačí. Tento zoznam mi však ukázal, že klienti nenašli moje portfólio a kontakt bol 'utopený'. Po úprave mám o 3 relevantné dopyty mesačne viac.",
     author: "Peter K.",
-    role: "majiteľ malého e-shopu",
+    role: "Architekt",
   },
   {
-    text: "Konečne audit, ktorému rozumie aj netechnik. Žiadne zložité výrazy, len jasné inštrukcie, čo mám na webe skontrolovať.",
+    text: "Konečne audit, ktorý nerieši len e-shopy. Žiadne zložité výrazy. Jasné inštrukcie pre nás, čo predávame služby a know-how.",
     author: "Jana M.",
-    role: "virtuálna asistentka",
+    role: "Virtuálna asistentka",
   },
 ];
 
@@ -36,7 +36,6 @@ const SocialProofSection = () => {
           </p>
         </div>
 
-        {/* Stats */}
         <div className="grid sm:grid-cols-3 gap-6 mb-16">
           {stats.map((stat, i) => (
             <div key={i} className="glass-card p-8 text-center">
@@ -50,17 +49,15 @@ const SocialProofSection = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
-            <div key={i} className="glass-card p-8">
-              <Quote className="w-8 h-8 text-primary/30 mb-4" />
-              <p className="text-muted-foreground leading-relaxed mb-6 text-lg italic">
+            <div key={i} className="text-left">
+              <Quote className="w-8 h-8 text-primary/30 mb-3" />
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg italic">
                 „{t.text}"
               </p>
-              <div>
-                <p className="font-bold">{t.author}</p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
-              </div>
+              <p className="font-bold">{t.author}</p>
+              <p className="text-sm text-muted-foreground">{t.role}</p>
             </div>
           ))}
         </div>

@@ -1,20 +1,19 @@
-import { HelpCircle, Clock, Globe } from "lucide-react";
-
-const objections = [
+const points = [
   {
-    icon: HelpCircle,
-    question: "Bojíte sa, že tomu nebudete rozumieť?",
-    answer: 'Checklist je písaný ľudskou rečou. Nepýtame sa na "stav kanonických tagov", ale na to, či "všetky varianty URL smerujú na jednu verziu". Všetko je vysvetlené tak, aby ste to pochopili sedliackym rozumom.',
+    title: '„Čo ak tomu nebudem rozumieť? Nie som programátor, som expert na svoje služby."',
+    text: 'To je presne dôvod, prečo tento checklist vznikol. Vynechali sme balast. Namiesto otázky „Máte správne nastavený canonical tag?" sa vás checklist opýta: „Je z nadpisu do 3 sekúnd jasné, čo robíte?". Ak viete odpovedať ÁNO alebo NIE na otázku, či sú vaše texty čitateľné, zvládnete celý tento audit ľavou zadnou.',
   },
   {
-    icon: Clock,
-    question: "Máte obavy, že to zaberie veľa času?",
-    answer: "Tabuľka je navrhnutá pre zaneprázdnených podnikateľov. Audit je rozdelený do sekcií. Môžete si spraviť len sekciu Dizajn pri rannej káve a SEO nechať na poobedie.",
+    title: '„Nemám čas lúštiť 50-stranové technické analýzy. Potrebujem robiť biznis."',
+    text: 'Ani by ste nemali. Tento audit nie je kniha, je to akčný nástroj v Google Sheets. Je rozdelený do 5 logických sekcií (SEO, Dizajn, Technika, Prístupnosť, Konverzia). Môžete si pri rannej káve skontrolovať len sekciu Formuláre a zistiť, či ich polia nie sú zbytočne komplikované. Už týchto 10 minút vám môže zachrániť stratené dopyty.',
   },
   {
-    icon: Globe,
-    question: "Funguje to na každom webe?",
-    answer: "Áno. Princípy v checkliste (jasná navigácia, čitateľný text, funkčné tlačidlá) platia rovnako pre WordPress, Shoptet, Wix aj web na mieru.",
+    title: '„Mám web na mieru / WordPress / Wix... bude tento zoznam sedieť na môj systém?"',
+    text: 'Princípy dôvery sú univerzálne. Nezáleží na tom, na akom „motore" váš web beží. Checklist rieši to, čo vidí klient: či je navigácia logická, či je kontrast textu dostatočný na čítanie a či odkazy v pätičke fungujú. Tieto pravidlá platia rovnako pre právnika s webom na mieru, ako pre konzultanta na Webflow.',
+  },
+  {
+    title: '„Čo ak nájdem chyby, ale nebudem ich vedieť opraviť?"',
+    text: 'To je prvý krok k náprave. Väčšinu chýb, ktoré audit odhalí (napr. nejasné CTA tlačidlá, chýbajúce nadpisy, zlá štruktúra menu), dokážete opraviť v editore textu sami. A ak nájdete technický problém? Teraz už presne viete, čo máte zadať svojmu webmasterovi, namiesto toho, aby ste mu len povedali: „Nefunguje to."',
   },
 ];
 
@@ -24,26 +23,18 @@ const ObjectionsSection = () => {
       <div className="container max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-6">
-            &bdquo;Zvládnem to, aj keď{" "}
-            <span className="text-gradient">nie som ITčkár?&ldquo;</span>
+            Zvládnete to, aj keď nie ste programátor
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Rozumieme vašim obavám. Pravdou je, že 80 % chýb na webe súvisí s logikou a obsahom, nie s kódom.
+            Väčšina dôvodov, prečo vás klienti neoslovia, sa neskrýva v zložitom kóde, ale v obsahu a psychológii predaja. Tento checklist vás nimi prevedie krok za krokom.
           </p>
         </div>
 
         <div className="space-y-6">
-          {objections.map((obj, i) => (
+          {points.map((point, i) => (
             <div key={i} className="glass-card p-8 hover:border-primary/30 transition-colors duration-300">
-              <div className="flex items-start gap-5">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                  <obj.icon className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-3">{obj.question}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{obj.answer}</p>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold mb-3">{point.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{point.text}</p>
             </div>
           ))}
         </div>

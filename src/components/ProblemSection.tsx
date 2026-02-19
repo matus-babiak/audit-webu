@@ -1,10 +1,9 @@
 import { AlertTriangle } from "lucide-react";
 
 const problems = [
-  "Návštevníci odchádzajú bez toho, aby nakúpili alebo zanechali kontakt.",
+  "Návštevníci odchádzajú bez toho, aby vás kontaktovali alebo zanechali kontakt.",
   "Neviete, či je chyba v textoch, v technickom nastavení alebo v dizajne.",
-  'Cítite sa stratení v technických pojmoch ako "kanonické tagy" alebo "Core Web Vitals".',
-  "Tento stav frustruje mnohých podnikateľov, ktorí vedia, že ich služby sú skvelé, ale ich web to nedokáže predať.",
+  'Investujete kopec času do marketingu, ale web tieto teplé kontakty „schladí" namiesto toho, aby ich premenil na stretnutie.',
 ];
 
 const ProblemSection = () => {
@@ -14,11 +13,11 @@ const ProblemSection = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-8">
           Máte pocit, že váš web je len{" "}
           <span className="text-destructive">&bdquo;drahou vizitkou&ldquo;</span>
-          , ktorá neprináša žiadnych zákazníkov?
+          , ktorá na seba nezarobí?
         </h2>
 
         <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-          Možno investujete do reklamy, tvoríte obsah, ale výsledky neprichádzajú.
+          Ste expert vo svojom odbore. Vaše služby sú špičkové, ale keď si potenciálny klient pozrie váš web, vidí niečo úplne iné.
         </p>
 
         <div className="grid gap-4">

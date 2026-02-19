@@ -1,11 +1,11 @@
 import { Search, Eye, Zap, Users, Target } from "lucide-react";
 
 const pillars = [
-  { icon: Search, title: "Nájditeľnosť (SEO)", desc: "Aby vás zákazníci vôbec videli." },
-  { icon: Eye, title: "Dojem (Dizajn & UX)", desc: "Aby sa cítili komfortne a nestratili sa." },
-  { icon: Zap, title: "Kondícia (Výkonnosť)", desc: "Aby nečakali a neodišli ku konkurencii." },
-  { icon: Users, title: "Prístupnosť", desc: "Aby bol web čitateľný pre každého." },
-  { icon: Target, title: "Presviedčanie (CRO)", desc: "To najdôležitejšie = aby návštevník vykonal akciu." },
+  { icon: Search, title: "Nájditeľnosť (SEO)", desc: "Aby vás našiel generálny riaditeľ, nie len náhodný surfér." },
+  { icon: Eye, title: "Dojem (UX/Design)", desc: "Aby web pôsobil prémiovo a odôvodnil vaše ceny." },
+  { icon: Zap, title: "Kondícia (Výkon)", desc: "Aby manažéri nečakali a neodišli ku konkurencii." },
+  { icon: Users, title: "Prístupnosť", desc: "Aby bol web čitateľný na každom zariadení." },
+  { icon: Target, title: "Presviedčanie (CRO)", desc: "To najdôležitejšie – premena návštevníka na dopyt (lead)." },
 ];
 
 const PillarSection = () => {
@@ -13,15 +13,11 @@ const PillarSection = () => {
     <section className="section-spacing px-4 sm:px-6">
       <div className="container max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
-            Unikátna metóda
-          </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight mb-6">
-            Autentický 5-pilierový systém auditu
+            Väčšina tvorcov webu rieši samotný web a kód. Ja riešim <span className="font-black text-primary">psychológiu klienta</span>.
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
-            Väčšina online nástrojov vám „vypľuje" technický report plný chýb v kóde, ktorým nerozumiete. 
-            Náš prístup sa na váš web pozerá ako váš ideálny zákazník.
+            Bežné online nástroje vám „vypľujú" technický report plný chýb, ktorým nerozumiete. To vám nových klientov neprinesie. Náš <span className="font-bold text-primary">5-Pilierový Systém Webovej Autority</span> sa na váš web pozerá očami vášho ideálneho klienta.
           </p>
         </div>
 
@@ -41,8 +37,17 @@ const PillarSection = () => {
         </div>
 
         <p className="text-center text-muted-foreground mt-12 text-lg italic">
-          Toto nie je len kontrola chýb. Je to mapa k webu, ktorý zarába.
+          Nie je to len obyčajný audit. Je to plán, ako z webu dostať ďalšie stretnutia.
         </p>
+
+        <div className="flex justify-center mt-10">
+          <a
+            href="#cta"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold text-lg hover:scale-105 transition-transform duration-300 glow-gold"
+          >
+            ⚡ Stiahnuť audit zdarma
+          </a>
+        </div>
       </div>
     </section>
   );

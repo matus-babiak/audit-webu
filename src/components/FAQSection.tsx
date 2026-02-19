@@ -7,20 +7,28 @@ import {
 
 const faqs = [
   {
-    q: "Potrebujem k vyplneniu auditu prístup do administrácie webu?",
-    a: "Nie, 95 % bodov v checkliste skontrolujete z pohľadu bežného návštevníka. Stačí vám otvoriť si váš web v prehliadači. Pre pár bodov v technickom SEO (napr. Google Search Console) je prístup výhodou, ale nie podmienkou.",
+    q: "Potrebujem k auditu prístupové heslá do administrácie?",
+    a: "Nie. 95 % bodov kontrolujete očami klienta. Zaujíma nás užívateľská skúsenosť a dôveryhodnosť ponuky, nie kód v pozadí. Stačí vám otvoriť si web v prehliadači.",
   },
   {
-    q: "Je tento checklist vhodný pre e-shopy alebo pre weby služieb?",
-    a: "Je univerzálny. Princípy ako jasná výzva na akciu, rýchlosť načítania či čitateľnosť na mobile sú kľúčové pre akýkoľvek typ webu, ktorý má za cieľ predávať alebo zbierať kontakty.",
+    q: "Je checklist vhodný, ak predávam služby a nie tovar?",
+    a: "Áno, je dizajnovaný primárne pre B2B služby. Nerieši e-shopové košíky, ale psychológiu predaja, budovanie autority a to najdôležitejšie – ako premeniť návštevníka na dopyt (lead).",
   },
   {
     q: "V akom formáte audit dostanem?",
-    a: "Získate odkaz na Google Sheets (Tabuľky Google). Tento formát je interaktívny \u2013 môžete si priamo v ňom zaškrtávať políčka (TRUE/FALSE) a vidieť svoj progres. Môžete si ho tiež stiahnuť ako Excel alebo PDF.",
+    a: "Získate prístup k interaktívnemu Google Sheets dokumentu. Žiadne mŕtve PDF. V tabuľke jednoducho odškrtávate políčka (TRUE/FALSE) a automaticky vidíte svoje skóre a progres.",
   },
   {
-    q: "Čo ak nájdem chyby, ktoré neviem opraviť sám?",
-    a: "To je prvý krok k úspechu \u2013 viete, že problém existuje. Mnohé veci (texty, obrázky) opravíte sami. Na technickejšie veci budete mať pripravené presné zadanie pre vášho programátora, čím ušetríte čas.",
+    q: "Čo ak nájdem technické chyby, ktoré neviem opraviť?",
+    a: 'Výborne, práve ste ušetrili za diagnostiku. Audit vám poslúži ako presné zadanie pre programátora. Namiesto „niečo mi nefunguje" mu pošlete konkrétny zoznam úloh, čím urýchlite opravu.',
+  },
+  {
+    q: "Rieši to len dizajn, alebo aj SEO?",
+    a: "Nástroj pokrýva všetkých 5 pilierov webovej autority: SEO, Dizajn/UX, Technický výkon, Prístupnosť a Konverziu (CRO). Získate tak komplexný obraz o kondícii vášho webu na jednom mieste.",
+  },
+  {
+    q: "Ako rýchlo uvidím výsledky po oprave chýb?",
+    a: "SEO zmeny potrebujú pár týždňov. Ale úpravy textov, formulárov a výziev na akciu (CTA), ktoré audit odhalí, môžu zvýšiť počet dopytov prakticky okamžite po nasadení.",
   },
 ];
 

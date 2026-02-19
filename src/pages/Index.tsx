@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 import HeroSection from "@/components/HeroSection";
 
 const ProblemSection = lazy(() => import("@/components/ProblemSection"));
@@ -28,11 +29,7 @@ const Index = () => {
         <CTASection />
         <FAQSection />
       </Suspense>
-      <footer className="py-12 text-center text-sm text-muted-foreground border-t border-border/30">
-        <div className="container">
-          © {new Date().getFullYear()} Audit webu. Všetky práva vyhradené. — Matúš Babiak
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   );
 };

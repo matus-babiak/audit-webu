@@ -17,13 +17,12 @@ const HeroSection = () => {
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.95] tracking-tight max-w-5xl">
             Zistite, prečo váš web{" "}
-            <span className="text-gradient">nepredáva</span>
+            <span className="text-gradient">neprináša nových klientov</span>
             , za menej ako 30 minút.
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Stiahnite si Kontrolný zoznam pre audit webu, ktorý vám okamžite odhalí chyby 
-            v SEO, dizajne a konverznosti, o ktorých ste doteraz nevedeli.
+            Stiahnite si <strong className="font-bold text-foreground">Kontrolný zoznam pre audit webu</strong>, ktorý vám odhalí skryté chyby, kvôli ktorým prichádzate o dopyty a telefonáty. Aj keď máte dobrú návštevnosť.
           </p>
 
           <a
@@ -46,7 +45,7 @@ const HeroSection = () => {
                 height={769}
                 loading="eager"
                 decoding="async"
-                fetchPriority="high"
+                fetchpriority="high"
               />
             </div>
           </div>
