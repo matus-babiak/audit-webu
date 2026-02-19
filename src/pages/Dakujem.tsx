@@ -1,8 +1,34 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const CAL_MEETING_URL = "https://cal.com/babiak/meeting";
+declare global {
+  interface Window {
+    Cal?: ((a: string, b: string, c?: object) => void) & { ns?: { meeting?: (action: string, opts: object) => void } };
+  }
+}
 
 const Dakujem = () => {
+  useEffect(() => {
+    if (typeof window === "undefined" || window.Cal?.ns?.meeting) return;
+
+    const script = document.createElement("script");
+    script.src = "https://app.cal.com/embed/embed.js";
+    script.async = true;
+    script.onload = () => {
+      window.Cal?.("init", "meeting", { origin: "https://app.cal.com" });
+      window.Cal?.ns?.meeting?.("inline", {
+        elementOrSelector: "#my-cal-inline-meeting",
+        config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" },
+        calLink: "babiak/meeting",
+      });
+      window.Cal?.ns?.meeting?.("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    };
+    document.head.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-background overflow-x-hidden flex flex-col items-center justify-center px-4 sm:px-6">
       <section className="section-spacing w-full">
@@ -28,14 +54,11 @@ const Dakujem = () => {
               Vyberieme sa spoločne cez zistenia z auditu, určíme prioritu a poviem vám,
               čo zmeniť ako prvé. Konzultácia trvá 20 minút a je bez záväzkov.
             </p>
-            <a
-              href={CAL_MEETING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold text-lg hover:scale-105 transition-transform duration-300 glow-gold"
-            >
-              Naplánovať bezplatnú konzultáciu (20 min)
-            </a>
+            <div
+              id="my-cal-inline-meeting"
+              className="w-full min-h-[630px] overflow-auto rounded-xl border border-border/50"
+              style={{ minHeight: "630px" }}
+            />
           </div>
 
           <Link
