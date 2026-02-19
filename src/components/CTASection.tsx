@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SUBSCRIBE_URL = "/.netlify/functions/subscribe";
 
 const CTASection = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -28,9 +30,7 @@ const CTASection = () => {
         return;
       }
 
-      setStatus("success");
-      setName("");
-      setEmail("");
+      navigate("/dakujem");
     } catch {
       setStatus("error");
       setErrorMessage("Nepodarilo sa odoslať. Skontrolujte internet a skúste znova.");
@@ -45,17 +45,7 @@ const CTASection = () => {
           <span className="text-gradient">ďalší zákazník.</span>
         </h2>
 
-        {status === "success" ? (
-          <div className="glass-card p-8 md:p-10 mt-10">
-            <p className="text-lg font-semibold text-primary">
-              Ďakujeme! Audit vám čoskoro príde na e-mail.
-            </p>
-            <p className="text-muted-foreground mt-2 text-sm">
-              Skontrolujte aj priečinok spam.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="glass-card p-8 md:p-10 mt-10 text-left space-y-6">
+        <form onSubmit={handleSubmit} className="glass-card p-8 md:p-10 mt-10 text-left space-y-6">
             {status === "error" && (
               <p className="text-sm text-destructive font-medium text-center bg-destructive/10 py-2 rounded-lg">
                 {errorMessage}
@@ -102,7 +92,6 @@ const CTASection = () => {
               Prístup vám príde okamžite na e-mail
             </p>
           </form>
-        )}
       </div>
     </section>
   );
