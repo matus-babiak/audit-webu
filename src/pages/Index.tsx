@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import SiteHeader from "@/components/SiteHeader";
 import HeroSection from "@/components/HeroSection";
 
 const ProblemSection = lazy(() => import("@/components/ProblemSection"));
@@ -14,6 +15,7 @@ const FAQSection = lazy(() => import("@/components/FAQSection"));
 const Index = () => {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
+      <SiteHeader />
       <HeroSection />
       <Suspense fallback={null}>
         <ProblemSection />

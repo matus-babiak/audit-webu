@@ -1,12 +1,14 @@
 import heroImage from "@/assets/audit-webu.jpg";
+// Menšia verzia sa generuje pri build/dev cez scripts/resize-hero.mjs
+import heroImage800 from "@/assets/audit-webu-800.jpg?url";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
-      
-      <div className="container max-w-6xl mx-auto pt-24 pb-16 md:pt-32">
+
+      <div className="container max-w-6xl mx-auto py-16 md:py-20 px-4 sm:px-6">
         <div className="flex flex-col items-center text-center gap-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-secondary/50 text-sm text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -36,8 +38,12 @@ const HeroSection = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 via-accent/10 to-primary/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
               <img
                 src={heroImage}
+                srcSet={`${heroImage800} 800w, ${heroImage} 1262w`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1024px"
                 alt="Náhľad audit checklistu v Google Sheets"
                 className="relative w-full rounded-2xl border border-border/30"
+                width={1262}
+                height={769}
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"

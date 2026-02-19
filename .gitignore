@@ -23,6 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 
+# Vygenerovaný responzívny obrázok (scripts/resize-hero.mjs)
+src/assets/audit-webu-800.jpg
+
 # Env (API kľúče – nikdy necommitujte)
 .env
 .env.local
