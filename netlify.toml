@@ -2,3 +2,9 @@
   command = "npm run build"
   publish = "dist"
   functions = "netlify/functions"
+
+# SPA: všetky cesty (napr. /dakujem) smerujú na index.html, React Router zobrazí stránku
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
