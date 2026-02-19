@@ -39,6 +39,8 @@ const HeroSection = () => {
                 alt="Náhľad audit checklistu v Google Sheets"
                 className="relative w-full rounded-2xl border border-border/30"
                 loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
           </div>

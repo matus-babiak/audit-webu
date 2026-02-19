@@ -4,6 +4,10 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 
 const Dakujem = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "meeting" });
       cal?.("ui", { hideEventTypeDetails: false, layout: "month_view" });
