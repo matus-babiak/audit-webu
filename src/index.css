@@ -142,3 +142,22 @@
 .leading-relaxed {
   line-height: 1.8;
 }
+
+/* Len mobil (pod 768px) */
+@media (max-width: 767px) {
+  .leading-\[0\.95\] {
+    line-height: 1.2;
+  }
+
+  .text-4xl {
+    font-size: 2.5rem;
+  }
+
+  .w-72 {
+    width: 100%;
+  }
+
+  .text-3xl {
+    font-size: 2rem;
+  }
+}
