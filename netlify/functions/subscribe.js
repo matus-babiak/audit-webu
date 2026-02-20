@@ -54,6 +54,7 @@ exports.handler = async (event) => {
           name: name || "",
         },
         resubscribe: false,
+        trigger_autoresponders: true,
       }),
     });
 
