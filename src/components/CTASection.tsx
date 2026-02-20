@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SUBSCRIBE_URL = "/.netlify/functions/subscribe";
+const SUBSCRIBE_URL = "/api/subscribe";
 
 const CTASection = () => {
   const navigate = useNavigate();
