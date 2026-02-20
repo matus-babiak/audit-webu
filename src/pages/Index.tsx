@@ -2,6 +2,7 @@ import { lazy, Suspense } from "react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import HeroSection from "@/components/HeroSection";
+import AnimateOnScroll from "@/components/AnimateOnScroll";
 
 const ProblemSection = lazy(() => import("@/components/ProblemSection"));
 const PillarSection = lazy(() => import("@/components/PillarSection"));
@@ -19,15 +20,33 @@ const Index = () => {
       <SiteHeader />
       <HeroSection />
       <Suspense fallback={null}>
-        <ProblemSection />
-        <PillarSection />
-        <BenefitsSection />
-        <PASSection />
-        <SocialProofSection />
-        <ObjectionsSection />
-        <GuaranteeSection />
-        <CTASection />
-        <FAQSection />
+        <AnimateOnScroll>
+          <ProblemSection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <PillarSection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <BenefitsSection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <PASSection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <SocialProofSection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <ObjectionsSection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <GuaranteeSection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <CTASection />
+        </AnimateOnScroll>
+        <AnimateOnScroll>
+          <FAQSection />
+        </AnimateOnScroll>
       </Suspense>
       <SiteFooter />
     </main>
